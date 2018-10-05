@@ -2,7 +2,7 @@ var express = require('express');
 var app=express();
 app.set('view engine', 'ejs');
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/privacypolicy/privacypolicy.html', function(req, res) {
 	var botname="Translate-a-bot Facebook app"
@@ -14,6 +14,10 @@ app.get('/privacypolicy/placelookup_policy.html', function(req, res) {
 });
 app.get('/privacypolicy/privacypolicybirdsbot.html', function(req, res) {
 	var botname="Birds of a Feather Messenger bot"
+    res.render('pages/privacy',{botname:botname});
+});
+app.get('/privacypolicy/FB_restaurant_search.html', function(req, res) {
+	var botname="Facebook Restaurant Search App"
     res.render('pages/privacy',{botname:botname});
 });
 app.get('/privacypolicy/myfbceleb_adatnyilatkozat.html', function(req, res) {
