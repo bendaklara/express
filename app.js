@@ -29,5 +29,5 @@ app.get('/privacypolicy/adatnyilatkozat.html', function(req, res) {
     res.render('pages/privacy_hun',{botname:botname});
 });
 
-console.log('server started on localhost:80');
-app.listen(80);
+console.log('server started on localhost:443');
+app.listen(443);
